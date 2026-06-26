@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Github, Twitter, Instagram } from 'lucide-react';
 import './Footer.css';
 
 export default function Footer() {
@@ -29,9 +28,9 @@ export default function Footer() {
         <div className="footer-social">
           <h3 className="footer-subtitle">CONNECT</h3>
           <div className="social-icons">
-            <a href="#" target="_blank" rel="noreferrer" title="GitHub"><Github size={20} /></a>
-            <a href="#" target="_blank" rel="noreferrer" title="Twitter"><Twitter size={20} /></a>
-            <a href="#" target="_blank" rel="noreferrer" title="Instagram"><Instagram size={20} /></a>
+            <a href="#" target="_blank" rel="noreferrer" title="GitHub">GitHub</a>
+            <a href="#" target="_blank" rel="noreferrer" title="Twitter">Twitter</a>
+            <a href="#" target="_blank" rel="noreferrer" title="Instagram">Instagram</a>
           </div>
           <div className="footer-copyright">
             &copy; {new Date().getFullYear()} Shingeki no Kyojin Fan Portal.<br/>

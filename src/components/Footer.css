@@ -77,12 +77,17 @@
 /* ── SOCIALS ── */
 .social-icons {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
 .social-icons a {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
   transition: color 0.3s, transform 0.3s;
 }
 
