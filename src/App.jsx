@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import AudioPlayer from './components/AudioPlayer';
 import Loader from './components/Loader';
+import Footer from './components/Footer';
 
 import Home from './pages/Home';
 import Episodes from './pages/Episodes';
@@ -58,6 +59,7 @@ function AppContent() {
               <Route path="/cast"       element={<AnimatedPage><Cast /></AnimatedPage>} />
             </Routes>
           </AnimatePresence>
+          <Footer />
           <AudioPlayer />
         </div>
       )}
