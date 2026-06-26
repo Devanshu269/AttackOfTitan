@@ -1,0 +1,261 @@
+.titans-page { display: flex; flex-direction: column; min-height: 100vh; overflow: hidden; }
+
+/* ── HEADER ─────────────────────────────────────── */
+.titans-header { text-align: center; padding: 3rem 2rem 0; }
+
+.titans-eyebrow {
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  letter-spacing: 6px;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.titans-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titans-indicator-line {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--primary-light), transparent);
+}
+
+/* ── CAROUSEL WRAPPER ─────────────────────────────── */
+.titan-carousel-wrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 2rem;
+  overflow: hidden;
+  min-height: 55vh;
+}
+
+/* Giant faded watermark text like reference site */
+.titan-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-heading);
+  font-size: clamp(6rem, 18vw, 14rem);
+  font-weight: 900;
+  color: rgba(255,255,255,0.03);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 10px;
+  user-select: none;
+}
+
+/* ── GHOST TITANS (prev/next sides) ──────────────── */
+.titan-ghost {
+  position: absolute;
+  bottom: 0;
+  width: 22%;
+  max-width: 280px;
+  height: 85%;
+  overflow: hidden;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0.25;
+  transition: opacity 0.4s ease;
+  filter: brightness(0.5) grayscale(0.5);
+}
+.titan-ghost:hover { opacity: 0.45; }
+.titan-ghost img {
+  height: 100%;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, rgba(0,0,0,1) 30%);
+  mask-image: linear-gradient(to top, transparent 0%, rgba(0,0,0,1) 30%);
+}
+.titan-ghost-prev { left: 0; justify-content: flex-start; }
+.titan-ghost-next { right: 0; justify-content: flex-end; }
+
+/* ── CENTER ACTIVE TITAN ──────────────────────────── */
+.titan-center {
+  position: relative;
+  width: 40%;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 10;
+}
+
+.titan-center-inner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.titan-center-inner img {
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 40px rgba(200, 30, 30, 0.5)) drop-shadow(0 0 80px rgba(0,0,0,0.9));
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,1) 15%);
+  mask-image: linear-gradient(to top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,1) 15%);
+}
+
+/* ── TITAN NAME DISPLAY ───────────────────────────── */
+.titan-name-display {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  letter-spacing: 8px;
+  color: rgba(255,255,255,0.85);
+  text-align: center;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+/* ── CONTROLS ─────────────────────────────────────── */
+.titan-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem 2rem 2rem;
+}
+
+.titan-ctrl-btn {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: rgba(255,255,255,0.45);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.titan-ctrl-btn:hover { color: #fff; }
+
+.titan-dots { display: flex; gap: 0.6rem; }
+.titan-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.titan-dot.active { background: var(--primary-light); transform: scale(1.4); }
+
+/* ── INFO BAND ─────────────────────────────────────── */
+.titan-info-band {
+  background: rgba(10,7,7,0.96);
+  border-top: 1px solid var(--primary-dark);
+  padding: 3rem 2rem;
+  margin-top: auto;
+}
+
+.titan-info-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.titan-info-num {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: var(--primary-dark);
+}
+
+.titan-info-name {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(200,0,0,0.4);
+  flex: 1;
+}
+
+.allegiance-pill {
+  display: inline-block;
+  font-family: var(--font-main);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  padding: 4px 14px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.allegiance-pill.eldia  { background: rgba(76,175,80,0.15); color: #4caf50; border: 1px solid rgba(76,175,80,0.4); }
+.allegiance-pill.marley { background: rgba(244,67,54,0.15); color: #f44336; border: 1px solid rgba(244,67,54,0.4); }
+.allegiance-pill.none   { background: rgba(158,158,158,0.1); color: #9e9e9e; border: 1px solid rgba(158,158,158,0.3); }
+
+.titan-info-body {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr;
+  gap: 3rem;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+.info-row span { font-family: var(--font-main); font-size: 0.7rem; letter-spacing: 3px; color: var(--text-muted); }
+.info-row strong { font-family: var(--font-heading); font-size: 1.2rem; color: #fff; }
+
+.titan-info-desc p {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.9;
+}
+
+.titan-info-abilities { }
+.abilities-lbl {
+  display: block;
+  font-family: var(--font-main);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+.titan-info-abilities ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.titan-info-abilities li {
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  color: #ddd;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.titan-info-abilities li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: var(--primary-light);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--primary-light);
+}
+
+@media (max-width: 900px) {
+  .titan-info-body { grid-template-columns: 1fr; gap: 2rem; }
+  .titan-ghost { width: 18%; max-width: 150px; }
+  .titan-center { width: 55%; }
+}
