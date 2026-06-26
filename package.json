@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://n1k0zy.github.io/AttackOfTitan",
+  "homepage": "https://devanshu269.github.io/AttackOfTitan",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
