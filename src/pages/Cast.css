@@ -1,0 +1,182 @@
+.cast-page { padding-top: 100px; }
+
+.cast-page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.cast-page-header .section-eyebrow {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+  color: var(--primary-light);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.cast-section-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  letter-spacing: 4px;
+  color: #fff;
+  margin-bottom: 2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--primary-dark);
+  display: inline-block;
+}
+
+/* ── PRODUCTION INFO ─────────────── */
+.production-band {
+  margin-bottom: 5rem;
+  padding: 3rem;
+  background: rgba(15,10,10,0.6);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-left: 3px solid var(--primary-dark);
+}
+
+.production-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0;
+}
+
+.production-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  gap: 2rem;
+}
+
+.prod-label {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.prod-value {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: #fff;
+  text-align: right;
+}
+
+/* ── VOICE CAST ──────────────────── */
+.voice-cast-section { margin-bottom: 5rem; }
+
+.voice-cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.cast-card {
+  background: rgba(12,10,10,0.7);
+  border: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+.cast-card-img {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+.cast-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: grayscale(60%);
+  transition: filter 0.4s, transform 0.4s;
+}
+.cast-card:hover .cast-card-img img {
+  filter: grayscale(0%);
+  transform: scale(1.06);
+}
+
+.cast-card-body {
+  padding: 1.2rem;
+  background: rgba(8,6,6,0.9);
+  border-top: 2px solid var(--primary-dark);
+}
+
+.cast-character {
+  display: block;
+  font-family: var(--font-main);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: var(--primary-light);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.cast-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.cast-en {
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ── PRODUCTION STAFF ────────────── */
+.staff-section { margin-bottom: 4rem; }
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.staff-card {
+  background: rgba(12,10,10,0.7);
+  border: 1px solid rgba(255,255,255,0.04);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.staff-card:hover { border-color: var(--primary-dark); }
+
+.staff-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.staff-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(80%);
+  transition: filter 0.4s;
+}
+.staff-card:hover .staff-img img { filter: grayscale(20%); }
+
+.staff-info {
+  padding: 1rem;
+  border-top: 1px solid var(--primary-dark);
+}
+.staff-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+.staff-info p {
+  font-family: var(--font-main);
+  font-size: 0.75rem;
+  color: var(--primary-light);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .production-band { padding: 2rem 1.5rem; }
+  .voice-cast-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+}

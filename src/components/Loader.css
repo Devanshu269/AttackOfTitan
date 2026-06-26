@@ -1,0 +1,132 @@
+.loader-root {
+  position: fixed;
+  inset: 0;
+  background: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  overflow: hidden;
+}
+
+/* Film grain / scan line overlay */
+.scan-lines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 3px,
+    rgba(255,255,255,0.015) 3px,
+    rgba(255,255,255,0.015) 4px
+  );
+  pointer-events: none;
+  animation: scanAnim 8s linear infinite;
+}
+
+@keyframes scanAnim {
+  0% { background-position-y: 0; }
+  100% { background-position-y: 100px; }
+}
+
+/* Cinematic wipe bars */
+.reveal-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #050505;
+  z-index: 10;
+  transform-origin: top center;
+}
+.reveal-bar.top {
+  top: 0;
+  height: 50%;
+  transform-origin: top center;
+}
+.reveal-bar.bottom {
+  bottom: 0;
+  height: 50%;
+  transform-origin: bottom center;
+}
+
+/* Center content */
+.loader-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  z-index: 5;
+  position: relative;
+}
+
+.wings-svg {
+  width: 280px;
+  height: 170px;
+  filter: drop-shadow(0 0 20px rgba(138, 3, 3, 0.8)) drop-shadow(0 0 60px rgba(138, 3, 3, 0.4));
+}
+
+.loader-text-block {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-phrase {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  letter-spacing: 6px;
+  color: rgba(255,255,255,0.85);
+  text-align: center;
+  text-shadow: 0 0 20px rgba(204, 0, 0, 0.6);
+  white-space: nowrap;
+}
+
+/* Progress */
+.loader-progress-track {
+  position: relative;
+  width: 340px;
+  height: 2px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 0;
+  overflow: visible;
+}
+
+.loader-progress-fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--primary-dark), var(--primary-light));
+  transform-origin: left center;
+}
+
+.loader-progress-glow {
+  position: absolute;
+  top: -4px;
+  width: 4px;
+  height: 10px;
+  background: #fff;
+  box-shadow: 0 0 15px 4px rgba(255,60,60,0.8);
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.loader-percent {
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  color: var(--text-muted);
+}
+
+/* HUD Corner Marks */
+.hud-corner {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-color: var(--primary-dark);
+  border-style: solid;
+  opacity: 0.6;
+}
+.hud-corner.top-left    { top: 20px; left: 20px; border-width: 1px 0 0 1px; }
+.hud-corner.top-right   { top: 20px; right: 20px; border-width: 1px 1px 0 0; }
+.hud-corner.bottom-left  { bottom: 20px; left: 20px; border-width: 0 0 1px 1px; }
+.hud-corner.bottom-right { bottom: 20px; right: 20px; border-width: 0 1px 1px 0; }
