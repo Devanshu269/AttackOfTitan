@@ -16,8 +16,8 @@ import './AudioPlayer.css';
  */
 
 const AOT_TRACKS = [
-  { title: "Shinzou wo Sasageyo!", artist: "Linked Horizon", videoId: "LKP-vZvjbh8" },
   { title: "Guren no Yumiya", artist: "Linked Horizon", videoId: "8OkpRK2_gVs" },
+  { title: "Shinzou wo Sasageyo!", artist: "Linked Horizon", videoId: "LKP-vZvjbh8" },
   { title: "Jiyuu no Tsubasa", artist: "Linked Horizon", videoId: "PbWFpzi8C94" },
   { title: "My War (Boku no Sensou)", artist: "Shinsei Kamattechan", videoId: "LV9CFlkEy1I" },
   { title: "The Rumbling", artist: "SiM", videoId: "9l9Wa-5ph6o" },
