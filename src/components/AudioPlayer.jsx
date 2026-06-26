@@ -19,10 +19,10 @@ const AOT_TRACKS = [
   { title: "Guren no Yumiya", artist: "Linked Horizon", videoId: "8OkpRK2_gVs" },
   { title: "Shinzou wo Sasageyo!", artist: "Linked Horizon", videoId: "LKP-vZvjbh8" },
   { title: "Jiyuu no Tsubasa", artist: "Linked Horizon", videoId: "PbWFpzi8C94" },
-  { title: "My War (Boku no Sensou)", artist: "Shinsei Kamattechan", videoId: "LV9CFlkEy1I" },
-  { title: "The Rumbling", artist: "SiM", videoId: "9l9Wa-5ph6o" },
+  // { title: "My War (Boku no Sensou)", artist: "Shinsei Kamattechan", videoId: "LV9CFlkEy1I" },
+  // { title: "The Rumbling", artist: "SiM", videoId: "9l9Wa-5ph6o" },
   { title: "Attack On Titan OST Mix", artist: "Hiroyuki Sawano", videoId: "MGRm4IzK1SQ" },
-  { title: "All Openings & Endings", artist: "Various Artists", videoId: "uF0u7C5zWwQ" },
+  // { title: "All Openings & Endings", artist: "Various Artists", videoId: "uF0u7C5zWwQ" },
 ];
 
 const buildSrc = (videoId, play) =>
